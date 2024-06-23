@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AndroidChatRobot</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Model">模型</string>
+    <string name="detail">图片精度</string>
+    <string name="aboutAuthor">the author\'s email : 1023097618@qq.com</string>
+    <string name="version">version 1.0.0</string>
+    <string name="Temperature">温度</string>
+    <string name="MaxTemperatureInfo">温度参数（Temperature）用于控制生成文本的随机性。温度值通常在0到1之间，但有时也可以超过这个范围。\n\n低温度值（例如0.1或更低）会使模型生成的回答更加确定、一致和可预测。这在需要准确性和一致性较高的场景中非常有用。\n\n高温度值（例如0.7或更高）会增加生成文本的多样性和创造性，但同时也可能增加文本中出现不相关或不准确信息的风险。\n\n调整温度参数可以帮助您平衡回答的创造性和准确性，根据应用场景的不同需求来选择最合适的设置。</string>
+    <string name="ShowPassword">显示token</string>
+    <string name="MaxContextCount">最大上下文</string>
+    <string name="MaxContextCountInfo">最大上下文限制数量指的是模型在生成回答时能够考虑的最大消息记录数。这个限制包括了输入给模型的提示（prompt）和模型之前的回答。\n\n较小的上下文限制意味着模型在生成回答时只能考虑较少的信息。这可能使得模型在处理长对话或需要大量背景信息的情况下表现不佳。\n\n较大的上下文限制允许模型考虑更多的信息，从而在处理复杂对话或需要丰富背景信息的情况下提供更准确、更连贯的回答。但是，这也可能导致处理速度变慢。</string>
+    <string name="info">you can get API TOKEN here</string>
+    <string name="chatgptWebsite">https://platform.openai.com/api-keys</string>
+
+</resources>

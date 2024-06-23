@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.ChatFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"/>
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/message_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write Here"
+            android:background="@drawable/rounded_rectangle"
+            android:layout_toLeftOf="@id/uploadBtn"
+            android:layout_centerInParent="true"
+            android:padding="16dp">
+        </EditText>
+        <ImageButton
+            android:id="@+id/uploadBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/image_upload"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/sendbtn"/>
+        <ImageButton
+            android:id="@+id/sendbtn"
+            android:layout_marginStart="10dp"
+            android:padding="8dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/send"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_tem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="?font2"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
+</RelativeLayout>

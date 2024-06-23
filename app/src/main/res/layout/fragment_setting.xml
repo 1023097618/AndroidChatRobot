@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/setting_capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="设置"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:id="@+id/optionssetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_capital"
+            android:padding="10dp">
+            <RelativeLayout
+                android:id="@+id/modelSpinners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:paddingTop="30dp">
+                <TextView
+                    android:id="@+id/spinnerModelTextLeft"
+                    android:layout_width="90dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/Model" />
+                <Spinner
+                    android:id="@+id/spinnerModel"
+                    android:layout_toEndOf="@id/spinnerModelTextLeft"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/imageSpinners"
+                android:layout_below="@id/modelSpinners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp">
+                <TextView
+                    android:id="@+id/spinnerImageTextLeft"
+                    android:layout_width="90dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/detail" />
+                <Spinner
+                    android:id="@+id/spinnerImage"
+                    android:layout_toEndOf="@id/spinnerImageTextLeft"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/LinearLayoutContext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageSpinners"
+                android:padding="30dp">
+
+                <TextView
+                    android:id="@+id/ContextTextLeft"
+                    android:layout_width="90dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/MaxContextCount" />
+
+                <SeekBar
+                    android:id="@+id/seekBarContext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ContextTextLeft"
+                    android:layout_toStartOf="@id/ContextTextRight"
+                    android:max="20" />
+
+                <TextView
+                    android:id="@+id/ContextTextRight"
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="val" />
+
+                <ImageButton
+                    android:id="@+id/ContextInfoButton"
+                    android:layout_width="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@id/ContextTextRight"
+                    android:src="@drawable/question_circle"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearLayoutTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearLayoutContext"
+                android:padding="30dp">
+
+                <TextView
+                    android:id="@+id/TemperatureTextLeft"
+                    android:layout_width="90dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/Temperature" />
+
+                <SeekBar
+                    android:id="@+id/seekBarTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/TemperatureTextRight"
+                    android:layout_toEndOf="@id/TemperatureTextLeft"
+                    android:max="20" />
+
+                <TextView
+                    android:id="@+id/TemperatureTextRight"
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="val" />
+                <ImageButton
+                    android:id="@+id/TemperatureInfoButton"
+                    android:layout_width="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="20dp"
+                    android:src="@drawable/question_circle"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/APITokenLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearLayoutTemperature">
+
+                <EditText
+                    android:id="@+id/edit_text_token"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_toStartOf="@id/token_show"
+                    android:hint="API Token"
+                    android:maxLines="1"
+                    android:padding="10dp" />
+
+                <CheckBox
+                    android:id="@+id/token_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/edit_text_token"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/ShowPassword" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/optionssetting">
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/info"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:textIsSelectable="true"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/chatgptWebsite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_below="@id/info"
+                android:text="@string/chatgptWebsite"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_marginTop="40dp"
+                android:textIsSelectable="true"
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/aboutAuthor"
+                android:layout_below="@id/chatgptWebsite"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/version"
+                android:layout_below="@id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

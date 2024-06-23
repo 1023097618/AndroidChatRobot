@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8px">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/left_chat_view"
+        android:layout_alignParentStart="true"
+        android:gravity="start"
+        android:paddingEnd="90dp"
+        android:paddingStart="10dp"
+        android:padding="10dp"
+        android:foreground="@drawable/ripple_effect">
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="8dp"
+            android:background="@drawable/rounded_rectangle"
+            android:backgroundTint="#1E88E5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_chat_text_view"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:text="Hello How Are you?"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/right_chat_view"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:paddingStart="90dp"
+        android:paddingEnd="10dp"
+        android:padding="10dp"
+        android:foreground="@drawable/ripple_effect">
+        <TextView
+            android:padding="8dp"
+            android:background="@drawable/rounded_rectangle"
+            android:backgroundTint="#1E88E5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_chat_text_view"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:text="Hello How Are you?"/>
+    </LinearLayout>
+</RelativeLayout>

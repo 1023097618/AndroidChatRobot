@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.debugFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:textIsSelectable="true"
+            android:id="@+id/debugtxt1"
+            android:layout_width="wrap_content"
+            android:text="2"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textIsSelectable="true"
+            android:id="@+id/debugtxt2"
+            android:layout_width="wrap_content"
+            android:text="1"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textIsSelectable="true"
+            android:id="@+id/debugtxt3"
+            android:layout_width="wrap_content"
+            android:text="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</FrameLayout>
